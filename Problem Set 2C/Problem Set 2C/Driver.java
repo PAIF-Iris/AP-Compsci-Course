@@ -21,6 +21,7 @@ public class Driver
         System.out.println (op2.getX());
         System.out.println (op2.getY());
         
+        //test method 1
         System.out.println ("QUADRATIC FORMULA: Find the roots of ax^2 + bx + c. Enter a, b and c: ");
         System.out.print ("a: ");
         double a = input.nextDouble(); 
@@ -31,6 +32,7 @@ public class Driver
         System.out.println ("The solutions for " + a + "x^2 + " + b + "x + " + c + " are " + Formulas.findQuadraticRoots(a, b, c));
         System.out.println ("");
         
+        //test method 2
         System.out.println ("SLOPE FORMULA: Find the slope between points (x1,y1) and (x2,y2)");
         System.out.print ("x1: ");
         double x1 = input.nextDouble(); 
@@ -45,6 +47,7 @@ public class Driver
         System.out.println ("A line between " + slope1 + " and " + slope2 + " has a slope of " + Formulas.findSlope(slope1, slope2));
         System.out.println ("");
         
+        //test method 3
         System.out.println ("MIDPOINT FORMULA: Find the midpoint between (x1,y1) and (x2,y2)");
         System.out.print ("x1: ");
         double x11 = input.nextDouble(); 
@@ -59,6 +62,7 @@ public class Driver
         System.out.println ("The midpoint between " + slope11 + " and " + slope22 + " is " + Formulas.findMidpoint(slope11, slope22));
         System.out.println ("");
         
+        //test method 4
         System.out.println ("SUM OF AN ARITHMETIC SERIES");
         System.out.print ("Number of terms: ");
         int terms = input.nextInt(); 
@@ -69,6 +73,7 @@ public class Driver
         System.out.println ("The sum of the first " + terms + " terms of an arithmetic series that starts with " + begin + " and increases by " + increment + " is " + Formulas.findArithmeticSeriesSum(begin, increment, terms));
         System.out.println ("");
         
+        //test method 5
         System.out.println ("SUM OF A GEOMETRIC SERIES");
         System.out.print ("Number of terms: ");
         int terms2 = input.nextInt(); 
@@ -79,6 +84,7 @@ public class Driver
         System.out.println ("The sum of the first " + terms2 + " terms of an arithmetic series that starts with " + begin2 + " and increases by a rate of " + increment2 + " is " + Formulas.findGeometricSeriesSum(begin2, increment2, terms2));
         System.out.println ("");
         
+        //test method 6
         System.out.println ("DIE ROLLER");
         System.out.print ("How many sides does your die have? ");
         int side = input.nextInt();

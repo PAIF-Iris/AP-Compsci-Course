@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Formulas
-comment0.text=\n\ Write\ a\ description\ of\ class\ Formulas\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment0.text=\n\ Iris\ Guo\n\ Sept.\ 25,\ 2024\n\ problem\ set\ 2B\n
 comment1.params=a\ b\ c
 comment1.target=OrderedPair\ findQuadraticRoots(double,\ double,\ double)
 comment2.params=A\ B
