@@ -16,6 +16,8 @@ public class Driver
 
         System.out.println(Review.totalSentiment("YelpReview.txt"));
         System.out.println(Review.starRating("YelpReview.txt"));
+        
+        System.out.println(Review.fakeReview("SimpleReview.txt", "positive"));
 
 
     }

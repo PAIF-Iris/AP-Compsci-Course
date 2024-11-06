@@ -172,7 +172,7 @@ public class Review {
         x += sentimentVal(review);
         return x;
     }
-    
+
     public static int starRating(String fileName) {
         double num = totalSentiment(fileName);
         if (num > 20) {
@@ -189,4 +189,32 @@ public class Review {
             return 0;
         }
     }
+
+    public static String fakeReview(String fileName, String posNeg) {
+        String review = textToString(fileName);
+        String N = "";
+        while(review.indexOf("*") >= 0){
+            int num = review.indexOf("*");
+            N += review.substring(0, num);
+            review = review.substring(num+1);
+            int num2 = review.indexOf(" ");
+            String word = review.substring(0, num2);
+            String word2 = removePunctuation (word);
+            System.out.println(word2);
+            if (posNeg.equals("positive") && sentimentVal(word2) <= 0){
+                N += randomPositiveAdj();
+            } else if (posNeg.equals("negative") && sentimentVal(word2) >= 0){
+                N += randomNegativeAdj();
+            } else {
+                N += word;
+            }
+            N += " ";
+            review = review.substring(num2+1);
+            System.out.println (N);
+            System.out.println(review);
+        }
+        N += review;
+        return N;
+    }
+
 }
