@@ -175,13 +175,13 @@ public class Review {
 
     public static int starRating(String fileName) {
         double num = totalSentiment(fileName);
-        if (num > 20) {
+        if (num > 8) {
             return 5;
-        } else if (num > 15) {
+        } else if (num > 6) {
             return 4;
-        } else if (num > 10) {
+        } else if (num > 4) {
             return 3;
-        } else if (num > 5) {
+        } else if (num > 2) {
             return 2;
         } else if (num > 0) {
             return 1;
@@ -199,19 +199,17 @@ public class Review {
             review = review.substring(num+1);
             int num2 = review.indexOf(" ");
             String word = review.substring(0, num2);
-            String word2 = removePunctuation (word);
-            System.out.println(word2);
-            if (posNeg.equals("positive") && sentimentVal(word2) <= 0){
+            word = removePunctuation (word);
+            int x = word.length();
+
+            if (posNeg.equals("positive") && sentimentVal(word) <= 0){
                 N += randomPositiveAdj();
-            } else if (posNeg.equals("negative") && sentimentVal(word2) >= 0){
+            } else if (posNeg.equals("negative") && sentimentVal(word) >= 0){
                 N += randomNegativeAdj();
             } else {
                 N += word;
             }
-            N += " ";
-            review = review.substring(num2+1);
-            System.out.println (N);
-            System.out.println(review);
+            review = review.substring(x);
         }
         N += review;
         return N;
