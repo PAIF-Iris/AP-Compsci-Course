@@ -2,10 +2,10 @@
 dependency1.from=Driver
 dependency1.to=Math
 dependency1.type=UsesDependency
-editor.fx.0.height=728
-editor.fx.0.width=800
-editor.fx.0.x=308
-editor.fx.0.y=25
+editor.fx.0.height=900
+editor.fx.0.width=1440
+editor.fx.0.x=0
+editor.fx.0.y=0
 objectbench.height=100
 objectbench.width=776
 package.divider.horizontal=0.6
