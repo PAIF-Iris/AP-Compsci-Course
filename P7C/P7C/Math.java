@@ -53,13 +53,9 @@ public class Math
                 if (one.get(one.size()-x) + two.get(two.size()-x) >= 10){
                     n.add(0, (one.get(one.size()-x) + two.get(two.size()-x)+place)%10);
                     place = 1;
-                    System.out.println(place);
-                    System.out.println(n);
                 } else {
                     n.add(0, one.get(one.size()-x) + two.get(two.size()-x)+place);
                     place = 0;
-                    System.out.println(place);
-                    System.out.println(n);
                 }
             }
         }
