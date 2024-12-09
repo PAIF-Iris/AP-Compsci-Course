@@ -7,6 +7,17 @@
  */
 public class TTT
 {
+    public static String[][] initializeBoard(){
+        String[][] grid = new String[3][3];
+        int player = 0;
+        for (int row = 0; row < grid.length; row++){
+            for (int col = 0; col < grid[0].length; col++){
+                grid[row][col] = " ";
+            }
+        }
+        return grid;
+    }
+    
     public static void printBoard(String[][] grid, int round, int player, boolean win){
         if (!win){
             System.out.println("Round " + round + ":");
@@ -58,27 +69,35 @@ public class TTT
         return board;
     }
 
-    public static boolean checkWin(String[][] board){
+    public static int checkWin(String[][] board){
         for (int x = 0; x < 3; x++){
             if (board[x][0] != " " && board[x][0] == board[x][1] && board[x][0] == board[x][2]){
-                return true;
+                return 1;
             }
         }
 
         for (int x = 0; x < 3; x++){
             if (board[0][x] != " " && board[0][x] == board[1][x] && board[0][x] == board[2][x]){
-                return true;
+                return 1;
             }
         }
 
         if (board[0][0] != " " && board[0][0] == board[1][1] && board[0][0] == board[2][2]){
-            return true;
+            return 1;
         }
 
         if (board[2][0] != " " && board[2][0] == board[1][1] && board[2][0] == board[0][2]){
-            return true;
+            return 1;
+        }
+        
+        for (int row = 0; row < 3; row++){
+            for (int col = 0; col < 3; col++){
+                if (board[row][col] == " "){
+                    return 0;
+                }
+            }
         }
 
-        return false;
+        return 2;
     }
 }
